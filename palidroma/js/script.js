@@ -7,8 +7,9 @@ var stampa = document.getElementById("risultato");
 
 // INPUT
   // l'utente inserisce una parola
-    testo = prompt("inserisci una parola");
-    console.log("la parola inserita e' ", testo);
+  testo = prompt("inserisci una parola");
+  console.log("la parola inserita e' ", testo);
+
 
 // OUTPUT
   stampa.innerHTML = reverseString(testo) + palindroma(testo);
@@ -26,8 +27,8 @@ var stampa = document.getElementById("risultato");
   // creo una funzione per capire se la parola e' palindroma
   function palindroma(str){
     if (str === reverseString(str)) {
-      return = " la parola e' palindroma";
+      return " e' palindroma";
     } else {
-      return = " la parola non e' palindroma";
+      return " non e' palindroma";
     }
   }

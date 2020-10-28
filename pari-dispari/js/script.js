@@ -6,6 +6,7 @@
 // Dichiariamo chi ha vinto.
 
 var sceltaUte, numeroUte, somma;
+var container = "";
 var stampa = document.getElementById("risultato")
 
 // INPUT
@@ -22,7 +23,6 @@ var stampa = document.getElementById("risultato")
   somma = numeroUte + myRandom();
   console.log("la somma dei due numeri e' ",somma);
 
-
 // OUTPUT
   if (pariDispari() === sceltaUte) {
     stampa.innerHTML = "hai vinto!";
@@ -31,17 +31,18 @@ var stampa = document.getElementById("risultato")
   }
 
 // FUNZIONI
-  // creo funzione random
-  function myRandom() {
-    numeroPc = Math.floor(Math.random() * 5) + 1;
-    return numeroPc;
-  }
+// creo funzione random
+function myRandom() {
+  numeroPc = Math.floor(Math.random() * 5) + 1;
+  return numeroPc;
+}
 
-  // stabilisco se la somma dei numeri e' pari o dispari
-  function pariDispari() {
-    if (somma % 2 === 0) {
-      return = "pari";
-    } else {
-      return = "dispari";
-    }
+// stabilisco se la somma dei numeri e' pari o dispari
+function pariDispari() {
+  if (somma % 2 === 0) {
+    container = "pari";
+  } else {
+    container = "dispari";
   }
+  return container;
+}
