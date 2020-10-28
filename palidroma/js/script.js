@@ -5,27 +5,29 @@
 var testo, parola;
 var stampa = document.getElementById("risultato");
 
-// l'utente inserisce una parola
-  testo = prompt("inserisci una parola");
-  console.log("la parola inserita e' ", testo);
+// INPUT
+  // l'utente inserisce una parola
+    testo = prompt("inserisci una parola");
+    console.log("la parola inserita e' ", testo);
 
-// creo una funzione per invertire la parola
-function reverseString(str) {
-  parola = str.split("").reverse().join("");
-  // str.split("") per trasformarlo in un array
-  // .reverse() per invertire gli elementi
-  // join("") per ritrasformarlo in una stringa
-  return parola
-}
+// OUTPUT
+  stampa.innerHTML = reverseString(testo) + palindroma(testo);
 
-// creo una funzione per capire se la parola e' palindroma
-function palindroma(str){
-  if (str === reverseString(str)) {
-    return = " la parola e' palindroma";
-  } else {
-    return = " la parola non e' palindroma";
+// FUNZIONI
+  // creo una funzione per invertire la parola
+  function reverseString(str) {
+    parola = str.split("").reverse().join("");
+    // str.split("") per trasformarlo in un array
+    // .reverse() per invertire gli elementi
+    // join("") per ritrasformarlo in una stringa
+    return parola
   }
-}
 
-// output
-stampa.innerHTML = reverseString(testo) + palindroma(testo);
+  // creo una funzione per capire se la parola e' palindroma
+  function palindroma(str){
+    if (str === reverseString(str)) {
+      return = " la parola e' palindroma";
+    } else {
+      return = " la parola non e' palindroma";
+    }
+  }
