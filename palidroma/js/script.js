@@ -2,7 +2,7 @@
 // Chiedere all’utente di inserire una parola
 // Creare una funzione per capire se la parola inserita è palindroma
 
-var testo, parola, pali;
+var testo, parola;
 var stampa = document.getElementById("risultato");
 
 // l'utente inserisce una parola
@@ -21,11 +21,10 @@ function reverseString(str) {
 // creo una funzione per capire se la parola e' palindroma
 function palindroma(str){
   if (str === reverseString(str)) {
-    pali = " la parola e' palindroma";
+    return = " la parola e' palindroma";
   } else {
-    pali = " la parola non e' palindroma";
+    return = " la parola non e' palindroma";
   }
-  return pali
 }
 
 // output
